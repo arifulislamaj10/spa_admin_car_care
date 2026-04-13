@@ -6,6 +6,7 @@ import { initAnalytics } from "./lib/analytics";
 import Dashboard from "./modules/Dashboard";
 import Users from "./modules/Users";
 import Bookings from "./modules/Bookings";
+import CancelledBookings from "./modules/CancelledBookings";
 import Payments from "./modules/Payments";
 import Settings from "./modules/Settings";
 import Login from "./modules/Auth/Login";
@@ -245,13 +246,7 @@ function App() {
           />
           <Route
             path="bookings/cancelled"
-            element={
-              <EP
-                title="Cancelled Bookings"
-                desc="Cancellation log with reasons, refund status, and pattern detection."
-                icon="❌"
-              />
-            }
+            element={<CancelledBookings />}
           />
           <Route
             path="bookings/disputes"
