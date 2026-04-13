@@ -6,7 +6,8 @@ dist/
 dist-ssr/
 
 # Environment variables
-.env
+
+.claude
 .env.local
 .env.*.local
 
