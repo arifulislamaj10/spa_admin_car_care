@@ -65,14 +65,11 @@ import RevenueEngine from "./modules/RevenueEngine";
 import Marketing from "./modules/Marketing";
 import SupportDesk from "./modules/SupportDesk";
 import CareChatAI from "./modules/CareChatAI";
+import CommunityPosts from "./modules/CommunityPosts";
 import CareChartData from "./modules/CareChartData";
 import ApiIntegrations from "./modules/ApiIntegrations";
 import AnalyticsDashboard from "./modules/AnalyticsDashboard";
 import Compliance from "./modules/Compliance";
-import LiveActivity from "./modules/LiveActivity";
-import SystemAlerts from "./modules/SystemAlerts";
-import ExecutiveSnapshot from "./modules/ExecutiveSnapshot";
-import PlatformHealth from "./modules/PlatformHealth";
 
 /* ─── Enterprise Placeholder Page ─── */
 const EP = ({
@@ -123,10 +120,10 @@ function App() {
         >
           {/* ── OVERVIEW ── */}
           <Route index element={<Dashboard />} />
-          <Route path="live-activity" element={<LiveActivity />} />
+          {/* <Route path="live-activity" element={<LiveActivity />} />
           <Route path="system-alerts" element={<SystemAlerts />} />
           <Route path="executive-snapshot" element={<ExecutiveSnapshot />} />
-          <Route path="platform-health" element={<PlatformHealth />} />
+          <Route path="platform-health" element={<PlatformHealth />} /> */}
 
           {/* ── IDENTITY & USERS ── */}
           <Route
@@ -244,10 +241,7 @@ function App() {
               />
             }
           />
-          <Route
-            path="bookings/cancelled"
-            element={<CancelledBookings />}
-          />
+          <Route path="bookings/cancelled" element={<CancelledBookings />} />
           <Route
             path="bookings/disputes"
             element={
@@ -605,6 +599,9 @@ function App() {
               />
             }
           />
+
+          {/* ── COMMUNITY ── */}
+          <Route path="community/posts" element={<CommunityPosts />} />
 
           {/* ── ANALYTICS ── */}
           <Route path="analytics/revenue" element={<AnalyticsDashboard />} />
